@@ -1,0 +1,27 @@
+{
+  "name": "laboratorio-javascript-oat1",
+  "version": "1.0.0",
+  "description": "Laboratório prático de JavaScript - OAT 1 - Desenvolvimento de APIs - UNEX 2026.2",
+  "main": "index.js",
+  "scripts": {
+    "q1": "node src/questao01-contagem-regressiva.js",
+    "q2": "node src/questao02-imc.js",
+    "q3": "node src/questao03-tabuada.js",
+    "q4": "node src/questao04-validacao-usuario.js",
+    "q5": "node src/questao05-estatistica.js",
+    "q6": "node src/questao06-temperaturas.js",
+    "q7": "node src/questao07-caracteres.js",
+    "q8": "node src/questao08-token.js",
+    "q9": "node src/questao09-maior-palavra.js",
+    "q10": "node src/questao10-times.js"
+  },
+  "keywords": [
+    "javascript",
+    "nodejs",
+    "unex",
+    "oat",
+    "desenvolvimento-de-apis"
+  ],
+  "author": "Lucas Vinicius Barbosa da Silva",
+  "license": "MIT"
+}
