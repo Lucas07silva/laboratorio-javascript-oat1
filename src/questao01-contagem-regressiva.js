@@ -11,7 +11,7 @@ function calcularContagemRegressiva(dataFutura) {
 
     const dias = Math.floor(diferenca/dia);
     const horas = Math.floor((diferenca%dia)/hora);
-    const minutos = Math.floor((diferenca%)/minuto);
+    const minutos = Math.floor((diferenca%hora)/minuto);
     const segundos = Math.floor((diferenca%minuto)/segundo);
 
     return {
