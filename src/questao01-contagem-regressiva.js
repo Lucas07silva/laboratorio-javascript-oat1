@@ -19,7 +19,7 @@ function calcularContagemRegressiva(dataFutura) {
         horas: horas,
         minutos: minutos,
         segundos: segundos,
-        texto:`falta ${dias} dias, ${horas}h, ${minutos}m e ${segundos}`
+        texto:`falta ${dias} dias, ${horas}h, ${minutos}m e ${segundos}s`
     }
 }
 const resultado = calcularContagemRegressiva("2027-01-01T00:00:00");
