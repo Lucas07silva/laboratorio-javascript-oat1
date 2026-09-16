@@ -1,27 +1,29 @@
-function calcularIMC (peso = 78.5, altura = 1.75) {
-    const imc = peso / (altura * altura);
-    return imc;
+function calcularIMC(peso, altura) {
+    const imcCalculado = peso / (altura * altura);
+    const imcArredondado = Number(imcCalculado.toFixed(2));
+    
+    let classificacao = "";
+
+    if (imcArredondado < 18.5) {
+        classificacao = "Abaixo do peso";
+    } else if (imcArredondado <= 24.9) {
+        classificacao = "Peso normal";
+    } else if (imcArredondado <= 29.9) {
+        classificacao = "Sobrepeso";
+    } else if (imcArredondado <= 34.9) {
+        classificacao = "Obesidade Grau I";
+    } else if (imcArredondado <= 39.9) {
+        classificacao = "Obesidade Grau II";
+    } else {
+        classificacao = "Obesidade Grau III";
+    }
+
+    return {
+        imc: imcArredondado,
+        classificacao: classificacao
+    };
 }
-function VerificaoOMS (imc) {
-    if(imc < 18.5){
-        return {msg: "abaixo do peso"};
-    }    
-    if(imc >= 18.5 && imc <= 24.9){
-        return {msg: "peso normal"};
-    }
-    if(imc >= 25.0 && imc <= 29.9){
-        return {msg: "Sobre peso"};
-    }
-    if(imc >= 30.0 && imc <= 34.9){
-        return {msg: "obesidade grau I"};
-    }
-    if(imc >= 35.0 && imc <= 39.9){
-        return {msg: "obesidade grau II"};
-    }
-    if(imc >= 40.0){
-        return {msg: "obesidade grau III"};
-    }
-}
-const imcCalculado = calcularIMC();
-const classificacao = VerificaoOMS(imcCalculado);
-console.log ("O Imc é: "+ imcCalculado.toFixed(2), " Classificação: " + classificacao.msg)
+
+// Exemplo de chamada:
+const resultado = calcularIMC(78.5, 1.75);
+console.log(resultado);
